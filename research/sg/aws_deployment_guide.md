@@ -9,13 +9,24 @@ This is the cleanest method for an executive to view the report as a standalone 
 
 1.  **Locate your AWS WP Root:** Use SFTP (e.g., FileZilla) or SSH to connect to your AWS EC2 instance.
 2.  **Create a Research Folder:** Navigate to `/var/www/html/` (standard WP root) and create a folder named `research`.
-3.  **Upload Artifacts:** Upload `shareable_report_en.html` and `shareable_report_zh.html` into that folder.
+3.  **Upload Artifacts:** Upload `index.html`, `shareable_report_en.html`, and `shareable_report_zh.html` into that folder.
 4.  **Share the Link:** The executive can now visit:
-    *   `https://yourdomain.com/research/shareable_report_en.html`
+    *   `https://yourdomain.com/research/`
 
 ---
 
-## Option 2: Publishing as a WordPress Post
+## Option 2: Deploying to Cloudflare Pages
+If you prefer using Cloudflare Pages for a specialized domain (e.g., `research.yourdomain.com`):
+
+1.  **Prepare Files:** Place `index.html`, `shareable_report_en.html`, and `shareable_report_zh.html` in a local folder.
+2.  **Login to Cloudflare:** Go to the Cloudflare Dashboard > Workers & Pages.
+3.  **Create Application:** Select "Create application" > "Pages" > "Upload assets".
+4.  **Upload:** Drag and drop the folder containing the three files.
+5.  **Deploy:** Follow the prompts to name your project and finish the deployment.
+
+---
+
+## Option 3: Publishing as a WordPress Post
 If you want the research to live *inside* your WordPress theme:
 
 1.  **Open WP Admin:** Log in to your WordPress dashboard on AWS.
@@ -36,6 +47,7 @@ If you don't want to touch your WordPress installation:
 ---
 
 ## File Manifest for Transfer:
+*   `research/sg/index.html` (Landing Portal)
 *   `research/sg/shareable_report_en.html` (Standalone Dashboard)
 *   `research/sg/shareable_report_zh.html` (Standalone Dashboard - Chinese)
 *   `research/sg/document_1a.md` (Source Data - English)
