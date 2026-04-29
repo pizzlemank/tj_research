@@ -1,0 +1,355 @@
+
+<style>
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.tag{display:inline-block;padding:2px 8px;font-size:11px;font-weight:500;border-radius:var(--border-radius-md);margin-right:6px;vertical-align:middle}
+.tag-tw{background:var(--color-background-warning);color:var(--color-text-warning);border:0.5px solid var(--color-border-warning)}
+.tag-us{background:var(--color-background-success);color:var(--color-text-success);border:0.5px solid var(--color-border-success)}
+.tag-shared{background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-tertiary)}
+.path-btn{padding:7px 16px;font-size:13px;cursor:pointer;border-radius:var(--border-radius-md);transition:all .15s}
+.path-btn:hover{opacity:.85}
+.sec-head{border-left:2px solid var(--color-border-secondary);border-radius:0;padding-left:12px;margin:2rem 0 1rem}
+.sec-head p{font-size:11px;color:var(--color-text-tertiary);margin:0 0 2px;text-transform:uppercase;letter-spacing:.06em}
+.sec-head h2{font-size:16px;font-weight:500;margin:0;color:var(--color-text-primary)}
+table{width:100%;border-collapse:collapse}
+td,th{vertical-align:top}
+.trow td{padding:8px 0;font-size:13px;border-bottom:0.5px solid var(--color-border-tertiary);line-height:1.6}
+.trow td:first-child{color:var(--color-text-secondary);width:35%;padding-right:12px}
+.note-box{border-radius:var(--border-radius-md);padding:10px 14px;font-size:13px;margin-bottom:1rem;border:0.5px solid}
+.note-us{background:var(--color-background-info);color:var(--color-text-info);border-color:var(--color-border-info)}
+.note-tw{background:var(--color-background-warning);color:var(--color-text-warning);border-color:var(--color-border-warning)}
+.note-ok{background:var(--color-background-success);color:var(--color-text-success);border-color:var(--color-border-success)}
+.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-lg);padding:1.25rem}
+.metric{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 12px}
+.metric p{margin:0}
+.metric .label{font-size:12px;color:var(--color-text-secondary);margin-bottom:4px!important}
+.metric .val{font-size:17px;font-weight:500}
+.dual-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:1.5rem}
+.path-card{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem}
+.path-card-head{font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--color-text-secondary);margin:0 0 12px}
+.row-item{margin-bottom:10px}
+.row-item .lbl{font-size:11px;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.05em;margin:0 0 2px}
+.row-item .val{font-size:13px;margin:0;line-height:1.55;color:var(--color-text-primary)}
+</style>
+
+<h2 class="sr-only">Singapore private property purchase guide covering Taiwan and USA passport holders, with interactive stamp duty calculator</h2>
+
+<div style="font-family:var(--font-sans);color:var(--color-text-primary);max-width:680px;padding:1rem 0 3rem" id="root">
+
+<p style="font-size:11px;color:var(--color-text-tertiary);margin:0 0 4px;letter-spacing:.07em;text-transform:uppercase">Document 2B  ·  March 2026  ·  Legal procedure</p>
+<h1 style="font-size:20px;font-weight:500;margin:0 0 4px;color:var(--color-text-primary)">Purchasing private residential property in Singapore</h1>
+<p style="font-size:14px;color:var(--color-text-secondary);margin:0 0 1.25rem">Taiwan national  ·  US national  ·  Dual passport holder</p>
+
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem">
+  <button class="path-btn" id="btn-tw" onclick="setPath('tw')">Taiwan passport only</button>
+  <button class="path-btn" id="btn-us" onclick="setPath('us')">USA passport only</button>
+  <button class="path-btn" id="btn-both" onclick="setPath('both')">I hold both passports</button>
+</div>
+
+<div id="dual-callout" style="background:var(--color-background-success);border:0.5px solid var(--color-border-success);border-radius:var(--border-radius-lg);padding:1rem 1.25rem;margin-bottom:2rem">
+  <p style="font-size:12px;font-weight:500;color:var(--color-text-success);margin:0 0 6px;text-transform:uppercase;letter-spacing:.06em">Strategic recommendation — dual passport holders</p>
+  <p style="font-size:14px;color:var(--color-text-success);margin:0 0 8px;line-height:1.65">Purchase under your US passport. The USSFTA (2004) entitles US nationals to the same ABSD treatment as Singapore citizens — 0% on a first residential property, versus 60% as a Taiwan national. On a S$3M purchase this is a S$1.8M difference. Instruct your conveyancing lawyer to file the ABSD remission form when exercising the OTP, and present your US passport as the primary identity document throughout.</p>
+  <p style="font-size:13px;color:var(--color-text-success);margin:0;opacity:.85">If you already own Singapore residential property purchased under either passport, consult your lawyer on how prior ownership affects your ABSD tier before proceeding.</p>
+</div>
+
+<!-- Section 1 -->
+<div class="sec-head"><p>Section 1</p><h2>Eligibility</h2></div>
+<p style="font-size:14px;line-height:1.7;color:var(--color-text-secondary);margin:0 0 8px">
+  <span class="tag tag-shared">Both</span> Under the Residential Property Act, both Taiwan and US nationals may purchase <strong style="color:var(--color-text-primary);font-weight:500">private condominiums and apartments</strong> without restriction. Neither may purchase landed property (terrace, semi-detached, detached) or HDB flats without LDAU approval, which is rarely granted to non-PRs.
+</p>
+<div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 14px;font-size:13px;color:var(--color-text-secondary);margin-bottom:.5rem">
+  The Meyer Road corridor projects in Document 1B are private condominiums and fall within this permitted category for both nationalities.
+</div>
+
+<!-- Section 2 -->
+<div class="sec-head"><p>Section 2</p><h2>Stamp duties</h2></div>
+
+<p style="font-size:13px;font-weight:500;color:var(--color-text-primary);margin:0 0 8px"><span class="tag tag-shared">Both</span> Buyer's Stamp Duty (BSD) — same for both nationalities</p>
+<table style="margin-bottom:1.5rem">
+  <thead><tr><th style="text-align:left;padding:6px 0;font-size:12px;font-weight:500;color:var(--color-text-secondary);border-bottom:0.5px solid var(--color-border-secondary)">Value band</th><th style="text-align:right;padding:6px 0;font-size:12px;font-weight:500;color:var(--color-text-secondary);border-bottom:0.5px solid var(--color-border-secondary)">Rate</th></tr></thead>
+  <tbody>
+    <tr class="trow"><td>First S$180,000</td><td style="text-align:right;font-weight:500">1%</td></tr>
+    <tr class="trow"><td>Next S$180,000</td><td style="text-align:right;font-weight:500">2%</td></tr>
+    <tr class="trow"><td>Next S$640,000</td><td style="text-align:right;font-weight:500">3%</td></tr>
+    <tr class="trow"><td>Next S$500,000</td><td style="text-align:right;font-weight:500">4%</td></tr>
+    <tr class="trow"><td>Next S$1,500,000</td><td style="text-align:right;font-weight:500">5%</td></tr>
+    <tr class="trow"><td>Above S$3,000,000</td><td style="text-align:right;font-weight:500">6%</td></tr>
+  </tbody>
+</table>
+
+<p style="font-size:13px;font-weight:500;color:var(--color-text-primary);margin:0 0 12px">Additional Buyer's Stamp Duty (ABSD) — differs by passport</p>
+
+<div id="absd-both" class="dual-grid">
+  <div style="background:var(--color-background-warning);border:0.5px solid var(--color-border-warning);border-radius:var(--border-radius-lg);padding:1rem">
+    <p class="path-card-head" style="color:var(--color-text-warning)">Taiwan passport</p>
+    <div style="font-size:30px;font-weight:500;color:var(--color-text-warning);margin:0 0 4px">60%</div>
+    <p style="font-size:13px;color:var(--color-text-warning);margin:0 0 12px;line-height:1.55;opacity:.9">Flat rate on any Singapore residential property. No tiering — first or fifth purchase treated identically.</p>
+    <div style="border-top:0.5px solid var(--color-border-warning);padding-top:10px">
+      <p style="font-size:12px;color:var(--color-text-warning);margin:0;opacity:.85">No FTA exemption available for Taiwan nationals under current Singapore policy.</p>
+    </div>
+  </div>
+  <div style="background:var(--color-background-success);border:0.5px solid var(--color-border-success);border-radius:var(--border-radius-lg);padding:1rem">
+    <p class="path-card-head" style="color:var(--color-text-success)">USA passport (USSFTA)</p>
+    <div style="margin-bottom:8px">
+      <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:13px;color:var(--color-text-success)">1st SG property</span><span style="font-size:15px;font-weight:500;color:var(--color-text-success)">0%</span></div>
+      <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:13px;color:var(--color-text-success)">2nd SG property</span><span style="font-size:15px;font-weight:500;color:var(--color-text-success)">20%</span></div>
+      <div style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--color-text-success)">3rd+ SG property</span><span style="font-size:15px;font-weight:500;color:var(--color-text-success)">30%</span></div>
+    </div>
+    <div style="border-top:0.5px solid var(--color-border-success);padding-top:10px">
+      <p style="font-size:12px;color:var(--color-text-success);margin:0;line-height:1.55;opacity:.9">File ABSD remission form (ABSD(REM)) within 14 days of exercising OTP. Not automatic — lawyer must apply. Present US passport as primary ID.</p>
+    </div>
+  </div>
+</div>
+<div id="absd-tw" style="display:none;background:var(--color-background-warning);border:0.5px solid var(--color-border-warning);border-radius:var(--border-radius-lg);padding:1rem;margin-bottom:1.5rem">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div><p style="font-size:13px;font-weight:500;color:var(--color-text-warning);margin:0 0 4px">ABSD — Taiwan national</p><p style="font-size:13px;color:var(--color-text-warning);margin:0;opacity:.85">Flat rate. No tiering by number of properties owned.</p></div>
+    <div style="font-size:32px;font-weight:500;color:var(--color-text-warning)">60%</div>
+  </div>
+</div>
+<div id="absd-us" style="display:none;background:var(--color-background-success);border:0.5px solid var(--color-border-success);border-radius:var(--border-radius-lg);padding:1rem;margin-bottom:1.5rem">
+  <p class="path-card-head" style="color:var(--color-text-success)">ABSD — US national (USSFTA)</p>
+  <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="font-size:13px;color:var(--color-text-success)">1st SG property</span><span style="font-size:14px;font-weight:500;color:var(--color-text-success)">0%</span></div>
+  <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="font-size:13px;color:var(--color-text-success)">2nd SG property</span><span style="font-size:14px;font-weight:500;color:var(--color-text-success)">20%</span></div>
+  <div style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--color-text-success)">3rd+ SG property</span><span style="font-size:14px;font-weight:500;color:var(--color-text-success)">30%</span></div>
+  <p style="font-size:12px;color:var(--color-text-success);margin:10px 0 0;opacity:.85;border-top:0.5px solid var(--color-border-success);padding-top:8px">Apply via ABSD(REM) form within 14 days of OTP exercise. Not automatic — instruct your lawyer explicitly.</p>
+</div>
+
+<!-- Calculator -->
+<div class="card" style="margin-bottom:2rem">
+  <p style="font-size:13px;font-weight:500;margin:0 0 1.25rem;color:var(--color-text-primary)">Stamp duty calculator</p>
+  <div style="margin-bottom:1rem">
+    <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+      <label style="font-size:13px;color:var(--color-text-secondary)">Purchase price</label>
+      <span style="font-size:13px;font-weight:500" id="price-display">S$3,000,000</span>
+    </div>
+    <input type="range" id="price-slider" min="1000000" max="15000000" step="100000" value="3000000" style="width:100%">
+    <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--color-text-tertiary);margin-top:4px"><span>S$1M</span><span>S$15M</span></div>
+  </div>
+  <div id="sg-props-row" style="margin-bottom:1rem">
+    <label style="font-size:13px;color:var(--color-text-secondary);display:block;margin-bottom:8px">Singapore residential properties currently owned (affects US ABSD tier)</label>
+    <div style="display:flex;gap:8px">
+      <button class="path-btn" id="sp0" onclick="setSGProps(0)" style="flex:1;font-size:12px;padding:6px 4px">None (buying 1st)</button>
+      <button class="path-btn" id="sp1" onclick="setSGProps(1)" style="flex:1;font-size:12px;padding:6px 4px">Own 1 (buying 2nd)</button>
+      <button class="path-btn" id="sp2" onclick="setSGProps(2)" style="flex:1;font-size:12px;padding:6px 4px">Own 2+ (buying 3rd+)</button>
+    </div>
+  </div>
+  <div style="border-top:0.5px solid var(--color-border-tertiary);padding-top:1rem" id="calc-results"></div>
+</div>
+
+<!-- Section 3: Financing -->
+<div class="sec-head"><p>Section 3</p><h2>Financing</h2></div>
+<p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 10px"><span class="tag tag-shared">Both</span> Same framework for both nationalities</p>
+<table style="margin-bottom:1.5rem">
+  <tbody>
+    <tr class="trow"><td>Loan-to-Value (LTV)</td><td>Up to 75% on first property bank loan</td></tr>
+    <tr class="trow"><td>TDSR</td><td>Total monthly debt repayments ≤ 55% of gross monthly income, including the new loan</td></tr>
+    <tr class="trow"><td>Maximum tenure</td><td>30 years, or until age 65 — whichever is earlier</td></tr>
+    <tr class="trow"><td>CPF</td><td>Not available to non-citizens or non-PRs. All payments — down payment and monthly instalments — must be cash or bank loan proceeds.</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 4: Legal -->
+<div class="sec-head"><p>Section 4</p><h2>Legal representation and process</h2></div>
+<p style="font-size:14px;line-height:1.7;color:var(--color-text-secondary);margin:0 0 10px">A Singapore-qualified conveyancing lawyer is required for every purchase. They handle OTP review, title searches, stamp duty filing, and coordination with the Singapore Land Authority (SLA). OTP to completion is typically 10–12 weeks.</p>
+<table style="margin-bottom:1rem">
+  <tbody>
+    <tr class="trow"><td>OTP option fee</td><td>1% of purchase price, paid to seller on receiving the OTP</td></tr>
+    <tr class="trow"><td>OTP exercise fee</td><td>4–9% of purchase price, paid within the option period (typically 21 days)</td></tr>
+    <tr class="trow"><td>Stamp duty deadline</td><td>BSD and ABSD must be paid within 14 days of exercising the OTP</td></tr>
+    <tr class="trow"><td>Completion period</td><td>10–12 weeks from OTP exercise to key handover</td></tr>
+  </tbody>
+</table>
+<div id="us-legal-note" class="note-box note-us" style="margin-bottom:1.5rem">
+  <span class="tag tag-us">US</span><span style="font-weight:500">Additional step for US nationals:</span> Instruct your lawyer to file Form ABSD(REM) within 14 days of exercising the OTP to claim the FTA remission. This filing is not automatic — it must be explicitly instructed. Provide a valid US passport and a statutory declaration of US citizenship at the time of filing.
+</div>
+
+<!-- Section 5: Remittance -->
+<div class="sec-head"><p>Section 5</p><h2>Remittance and foreign exchange</h2></div>
+<div id="remit-both" class="dual-grid">
+  <div class="path-card">
+    <p class="path-card-head">Taiwan path</p>
+    <div class="row-item"><p class="lbl">Annual limit</p><p class="val">USD 5,000,000 per individual. Above this threshold, prior application to Taiwan's Central Bank (CBC) is required.</p></div>
+    <div class="row-item"><p class="lbl">Transfer method</p><p class="val">SWIFT wire from Taiwan bank to Singapore lawyer's conveyancing client account.</p></div>
+    <div class="row-item"><p class="lbl">Currency</p><p class="val">TWD → SGD typically requires USD as an intermediate step. TWD/SGD can move 8–12% over 12 months — time the conversion or hold SGD in advance.</p></div>
+    <div class="row-item"><p class="lbl">AML</p><p class="val">Source-of-funds documentation required by both sending and receiving banks on large transfers.</p></div>
+  </div>
+  <div class="path-card">
+    <p class="path-card-head">USA path</p>
+    <div class="row-item"><p class="lbl">Annual limit</p><p class="val">No limit on personal remittances from the United States.</p></div>
+    <div class="row-item"><p class="lbl">Transfer method</p><p class="val">SWIFT wire from US bank to Singapore lawyer's conveyancing client account.</p></div>
+    <div class="row-item"><p class="lbl">Currency</p><p class="val">USD → SGD. One of the most liquid pairs in Asia — low conversion friction and tight spreads.</p></div>
+    <div class="row-item"><p class="lbl">FBAR</p><p class="val">File FinCEN 114 if any foreign account exceeds USD 10,000 at any point in the year.</p></div>
+    <div class="row-item"><p class="lbl">FATCA</p><p class="val">Singapore institutions report your accounts to the IRS if balances exceed USD 50,000. File Form 8938 with your federal return.</p></div>
+  </div>
+</div>
+<div id="remit-tw" style="display:none;margin-bottom:1.5rem">
+  <div class="row-item" style="padding-bottom:10px;border-bottom:0.5px solid var(--color-border-tertiary)"><p class="lbl">Annual limit</p><p class="val" style="font-size:14px">USD 5,000,000 per individual. Transfers above this require prior application to Taiwan's Central Bank (CBC).</p></div>
+  <div class="row-item" style="padding-bottom:10px;border-bottom:0.5px solid var(--color-border-tertiary);margin-top:10px"><p class="lbl">Transfer method</p><p class="val" style="font-size:14px">SWIFT from Taiwan bank → Singapore lawyer's conveyancing client account. Ensures AML compliance and full audit trail.</p></div>
+  <div class="row-item" style="padding-bottom:10px;border-bottom:0.5px solid var(--color-border-tertiary);margin-top:10px"><p class="lbl">Currency</p><p class="val" style="font-size:14px">TWD → SGD requires USD as an intermediate step in most cases. TWD/SGD can shift 8–12% over 12 months. Hold SGD or hedge if the purchase timeline is long.</p></div>
+  <div class="row-item" style="margin-top:10px"><p class="lbl">Source of funds</p><p class="val" style="font-size:14px">Singapore banks and lawyers will request documentation evidencing the lawful origin of funds for purchases at this price point.</p></div>
+</div>
+<div id="remit-us" style="display:none;margin-bottom:1.5rem">
+  <div class="row-item" style="padding-bottom:10px;border-bottom:0.5px solid var(--color-border-tertiary)"><p class="lbl">Annual limit</p><p class="val" style="font-size:14px">No limit on personal remittances from the United States.</p></div>
+  <div class="row-item" style="padding-bottom:10px;border-bottom:0.5px solid var(--color-border-tertiary);margin-top:10px"><p class="lbl">Transfer method</p><p class="val" style="font-size:14px">SWIFT from US bank → Singapore lawyer's conveyancing client account.</p></div>
+  <div class="row-item" style="padding-bottom:10px;border-bottom:0.5px solid var(--color-border-tertiary);margin-top:10px"><p class="lbl">FBAR (FinCEN 114)</p><p class="val" style="font-size:14px">Required if any foreign financial account exceeds USD 10,000 at any point during the calendar year.</p></div>
+  <div class="row-item" style="padding-bottom:10px;border-bottom:0.5px solid var(--color-border-tertiary);margin-top:10px"><p class="lbl">FATCA (Form 8938)</p><p class="val" style="font-size:14px">Singapore institutions report your accounts to the IRS if balances exceed USD 50,000. File Form 8938 with your federal return accordingly.</p></div>
+  <div class="row-item" style="margin-top:10px"><p class="lbl">US rental income reporting</p><p class="val" style="font-size:14px">Singapore rental income must be declared on Schedule E of your US federal return. Claim a Foreign Tax Credit for the 24% Singapore income tax paid — this may largely offset US federal tax on the same income.</p></div>
+</div>
+<div id="us-worldwide-note" class="note-box note-us" style="margin-bottom:1.5rem">
+  <span class="tag tag-us">US</span><span style="font-weight:500">Worldwide income reporting:</span> US citizens must declare Singapore rental income on their federal return annually. The 24% Singapore tax paid qualifies for the Foreign Tax Credit and will often fully offset federal tax on that income. Capital gains from eventual sale must also be reported on your US return even though Singapore levies no CGT — gains are taxed at US capital gains rates (0–20% + potential 3.8% NIIT). Factor this into your exit model.
+</div>
+
+<!-- Section 6: Post-purchase -->
+<div class="sec-head"><p>Section 6</p><h2>Post-purchase obligations</h2></div>
+<p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 10px"><span class="tag tag-shared">Both</span> Same for both nationalities</p>
+<table style="margin-bottom:1.5rem">
+  <tbody>
+    <tr class="trow"><td>Property tax</td><td>Non-owner-occupied progressive rate applies if rented. Factor into net yield — this is why gross yields in Document 1B are materially higher than net.</td></tr>
+    <tr class="trow"><td>Income tax on rent</td><td>Non-resident landlords: 24% flat rate on net rental income (gross rent minus allowable expenses). Annual IRAS filing required.</td></tr>
+    <tr class="trow"><td>MCST fees</td><td>Monthly or quarterly management fees and sinking fund contributions. Ranges approximately S$300–S$800/month for luxury Meyer Road projects.</td></tr>
+    <tr class="trow"><td>Net yield estimate</td><td>Gross yields of 3.0–3.4% (per Document 1B) reduce to approximately 1.2–1.9% after property tax, MCST, vacancy (5–7%), and 24% income tax. Model net, not gross, when evaluating returns.</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 7: Exit -->
+<div class="sec-head"><p>Section 7</p><h2>Exit strategy</h2></div>
+<p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 10px"><span class="tag tag-shared">Both</span> Same SSD framework for both nationalities</p>
+<table style="margin-bottom:1rem">
+  <thead><tr><th style="text-align:left;padding:6px 0;font-size:12px;font-weight:500;color:var(--color-text-secondary);border-bottom:0.5px solid var(--color-border-secondary)">Seller's Stamp Duty (SSD)</th><th style="text-align:right;padding:6px 0;font-size:12px;font-weight:500;color:var(--color-text-secondary);border-bottom:0.5px solid var(--color-border-secondary)">Rate</th></tr></thead>
+  <tbody>
+    <tr class="trow"><td>Sale within year 1 of purchase</td><td style="text-align:right;font-weight:500">12%</td></tr>
+    <tr class="trow"><td>Sale within year 2</td><td style="text-align:right;font-weight:500">8%</td></tr>
+    <tr class="trow"><td>Sale within year 3</td><td style="text-align:right;font-weight:500">4%</td></tr>
+    <tr class="trow"><td>Sale after year 3</td><td style="text-align:right;font-weight:500">0%</td></tr>
+  </tbody>
+</table>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin-bottom:1rem">
+  <div class="note-box note-ok" style="margin:0"><p style="font-size:12px;font-weight:500;margin:0 0 4px">No capital gains tax (Singapore)</p><p style="font-size:13px;margin:0;line-height:1.55;opacity:.9">Gains are fully repatriable after clearing outstanding loans, SSD, and taxes. Proceeds may be wired back to Taiwan or the US without restriction.</p></div>
+  <div style="background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:10px 14px"><p style="font-size:12px;font-weight:500;margin:0 0 4px">Trading intent risk</p><p style="font-size:13px;color:var(--color-text-secondary);margin:0;line-height:1.55">IRAS may assess frequent short-term buyers as traders and tax profits as income rather than capital gains. Both nationalities face this equally.</p></div>
+</div>
+<div id="us-cgt-note" class="note-box note-us" style="margin-bottom:1.5rem">
+  <span class="tag tag-us">US</span><span style="font-weight:500">US capital gains on Singapore property:</span> Even though Singapore levies no CGT, US citizens must report the gain on their federal return. Taxed at capital gains rates (0–20%) plus potential 3.8% NIIT. Singapore's 0% CGT cannot offset this — no Foreign Tax Credit is available against a tax Singapore did not charge. Build this into exit modelling, particularly on high-appreciation scenarios.
+</div>
+
+<div style="border-top:0.5px solid var(--color-border-tertiary);padding-top:1rem">
+  <p style="font-size:11px;color:var(--color-text-tertiary);margin:0;line-height:1.7">Sources: Singapore Residential Property Act; IRAS stamp duty guidelines (2026); MAS financing regulations; USSFTA (2004); Taiwan Central Bank regulations (2026). This document is a research summary and does not constitute legal or tax advice. Engage a Singapore-qualified conveyancing lawyer for the purchase, and a US CPA with international tax experience if proceeding under the US passport path.</p>
+</div>
+
+</div>
+
+<script>
+let currentPath = 'both';
+let sgProps = 0;
+
+function calcBSD(p) {
+  const b = [[180000,.01],[180000,.02],[640000,.03],[500000,.04],[1500000,.05],[1e12,.06]];
+  let tax = 0, rem = p;
+  for (const [lim, rate] of b) {
+    const t = Math.min(rem, lim);
+    tax += t * rate;
+    rem -= t;
+    if (rem <= 0) break;
+  }
+  return Math.round(tax);
+}
+
+function S(n) { return 'S$' + Math.round(n).toLocaleString(); }
+function P(n) { return n === 0 ? '0%' : (n*100).toFixed(0) + '%'; }
+
+function setPath(p) {
+  currentPath = p;
+  ['tw','us','both'].forEach(x => {
+    const btn = document.getElementById('btn-' + x);
+    if (btn) {
+      btn.style.background = x === p ? 'var(--color-background-info)' : 'transparent';
+      btn.style.color = x === p ? 'var(--color-text-info)' : 'var(--color-text-secondary)';
+      btn.style.border = x === p ? '0.5px solid var(--color-border-info)' : '0.5px solid var(--color-border-tertiary)';
+      btn.style.fontWeight = x === p ? '500' : '400';
+    }
+  });
+
+  const showTW = p === 'tw' || p === 'both';
+  const showUS = p === 'us' || p === 'both';
+  const showBoth = p === 'both';
+
+  document.getElementById('dual-callout').style.display = showBoth ? '' : 'none';
+  document.getElementById('absd-both').style.display = showBoth ? '' : 'none';
+  document.getElementById('absd-tw').style.display = (!showBoth && showTW) ? '' : 'none';
+  document.getElementById('absd-us').style.display = (!showBoth && showUS) ? '' : 'none';
+  document.getElementById('sg-props-row').style.display = showUS ? '' : 'none';
+  document.getElementById('us-legal-note').style.display = showUS ? '' : 'none';
+  document.getElementById('remit-both').style.display = showBoth ? '' : 'none';
+  document.getElementById('remit-tw').style.display = (!showBoth && showTW) ? '' : 'none';
+  document.getElementById('remit-us').style.display = (!showBoth && showUS) ? '' : 'none';
+  document.getElementById('us-worldwide-note').style.display = showUS ? '' : 'none';
+  document.getElementById('us-cgt-note').style.display = showUS ? '' : 'none';
+
+  updateCalc();
+}
+
+function setSGProps(n) {
+  sgProps = n;
+  [0,1,2].forEach(x => {
+    const btn = document.getElementById('sp' + x);
+    if (!btn) return;
+    btn.style.background = x === n ? 'var(--color-background-info)' : 'transparent';
+    btn.style.color = x === n ? 'var(--color-text-info)' : 'var(--color-text-secondary)';
+    btn.style.border = x === n ? '0.5px solid var(--color-border-info)' : '0.5px solid var(--color-border-tertiary)';
+    btn.style.fontWeight = x === n ? '500' : '400';
+  });
+  updateCalc();
+}
+
+function updateCalc() {
+  const price = Number(document.getElementById('price-slider').value);
+  document.getElementById('price-display').textContent = S(price);
+  const bsd = calcBSD(price);
+  const twAbsd = Math.round(price * 0.60);
+  const usRate = sgProps === 0 ? 0 : sgProps === 1 ? 0.20 : 0.30;
+  const usAbsd = Math.round(price * usRate);
+  const twTotal = price + bsd + twAbsd;
+  const usTotal = price + bsd + usAbsd;
+  const saving = twTotal - usTotal;
+
+  const showTW = currentPath === 'tw' || currentPath === 'both';
+  const showUS = currentPath === 'us' || currentPath === 'both';
+  const showBoth = currentPath === 'both';
+
+  let html = '';
+  if (showBoth) {
+    html = `<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+      <div class="metric"><p class="label">BSD (both paths)</p><p class="val">${S(bsd)}</p></div>
+      <div class="metric"><p class="label">ABSD saving — US path</p><p class="val" style="color:var(--color-text-success)">${S(saving)}</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <div style="background:var(--color-background-warning);border:0.5px solid var(--color-border-warning);border-radius:var(--border-radius-md);padding:10px 12px">
+        <p class="label" style="color:var(--color-text-warning)">Total cost — TW path</p>
+        <p class="val" style="color:var(--color-text-warning)">${S(twTotal)}</p>
+        <p style="font-size:11px;color:var(--color-text-warning);margin:4px 0 0;opacity:.8">${S(bsd)} BSD + ${S(twAbsd)} ABSD (60%)</p>
+      </div>
+      <div style="background:var(--color-background-success);border:0.5px solid var(--color-border-success);border-radius:var(--border-radius-md);padding:10px 12px">
+        <p class="label" style="color:var(--color-text-success)">Total cost — US path</p>
+        <p class="val" style="color:var(--color-text-success)">${S(usTotal)}</p>
+        <p style="font-size:11px;color:var(--color-text-success);margin:4px 0 0;opacity:.8">${S(bsd)} BSD + ${S(usAbsd)} ABSD (${P(usRate)})</p>
+      </div>
+    </div>`;
+  } else if (showTW) {
+    html = `<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <div class="metric"><p class="label">BSD</p><p class="val">${S(bsd)}</p></div>
+      <div class="metric"><p class="label">ABSD (60%)</p><p class="val">${S(twAbsd)}</p></div>
+      <div class="metric"><p class="label">Total acquisition cost</p><p class="val">${S(twTotal)}</p></div>
+    </div>`;
+  } else {
+    html = `<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <div class="metric"><p class="label">BSD</p><p class="val">${S(bsd)}</p></div>
+      <div class="metric"><p class="label">ABSD (${P(usRate)})</p><p class="val">${S(usAbsd)}</p></div>
+      <div class="metric"><p class="label">Total acquisition cost</p><p class="val">${S(usTotal)}</p></div>
+    </div>`;
+  }
+  document.getElementById('calc-results').innerHTML = html;
+}
+
+document.getElementById('price-slider').addEventListener('input', updateCalc);
+
+setPath('both');
+setSGProps(0);
+</script>
