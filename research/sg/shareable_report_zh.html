@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>執行研究報告：新加坡美雅路 (Meyer Road, D15)</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <style>
+        :root {
+            --primary-color: #1a2a6c;
+            --secondary-color: #b21f1f;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+        }
+        body {
+            font-family: 'PingFang TC', 'Heiti TC', 'Microsoft JhengHei', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        header {
+            border-bottom: 3px solid var(--primary-color);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+        h1 { color: var(--primary-color); margin: 0; font-size: 2.2em; }
+        h2 { color: var(--primary-color); border-left: 5px solid var(--secondary-color); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary-color); }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        tr:hover { background-color: #f9f9f9; }
+        .kpi-box {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .kpi-card {
+            flex: 1;
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .kpi-card h4 { margin: 0; color: #777; font-size: 0.8em; text-transform: uppercase; }
+        .kpi-card p { margin: 10px 0 0; font-size: 1.5em; font-weight: bold; color: var(--primary-color); }
+        .mermaid { margin: 40px 0; display: flex; justify-content: center; }
+        .footer { margin-top: 50px; font-size: 0.8em; color: #999; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
+        a { color: var(--secondary-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>執行研究報告</h1>
+            <p><strong>主題：</strong> 新加坡私人住宅 — 美雅路 (Meyer Road, D15)<br>
+            <strong>日期：</strong> 2026年3月</p>
+        </header>
+
+        <section>
+            <h2>1. 執行摘要與關鍵績效指標 (KPI)</h2>
+            <div class="kpi-box">
+                <div class="kpi-card"><h4>中位數尺價</h4><p>S$ 3,000 PSF</p></div>
+                <div class="kpi-card"><h4>平均收益率</h4><p>3.1%</p></div>
+                <div class="kpi-card"><h4>增值潛力</h4><p>高 (High)</p></div>
+            </div>
+            <p>本報告分析了被譽為「東部納西姆」的美雅路走廊。隨著湯申-東海岸線 (TEL) 的全面運營，交通便利性已彌合了東海岸的寧靜與中央商務區 (CBD) 的可達性之間的差距，推動了永久地契海景土地的稀缺溢價。</p>
+        </section>
+
+        <section>
+            <h2>2. 核心物業發現</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>項目名稱</th>
+                        <th>狀態/完工</th>
+                        <th>價格範圍 (PSF)</th>
+                        <th>樓面規劃</th>
+                        <th>連結</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>美雅豪苑 (Meyer Mansion)</strong></td>
+                        <td>2024</td>
+                        <td>S$ 2,778 - S$ 3,647</td>
+                        <td>有</td>
+                        <td><a href="https://maps.google.com/?q=79+Meyer+Road">地圖</a> | <a href="https://www.guocoland.com.sg/SG/MeyerMansion.asp">官網</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>美雅居 (Meyerhouse)</strong></td>
+                        <td>2022</td>
+                        <td>S$ 2,600 - S$ 3,200</td>
+                        <td>有</td>
+                        <td><a href="https://maps.google.com/?q=128+Meyer+Road">地圖</a> | <a href="https://uolhomes.com.sg/project/meyerhouse/">官網</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>美雅藍 (Meyer Blue)</strong></td>
+                        <td>2028 (預)</td>
+                        <td>S$ 2,900 - S$ 3,369</td>
+                        <td>有</td>
+                        <td><a href="https://maps.google.com/?q=83+Meyer+Road">地圖</a> | <a href="https://meyerblue-official.com.sg/">官網</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>One Meyer</strong></td>
+                        <td>2023</td>
+                        <td>S$ 2,700 - S$ 3,257</td>
+                        <td>有</td>
+                        <td><a href="https://maps.google.com/?q=1+Meyer+Place">地圖</a> | <a href="https://www.sustainedland.com/sl-projects/one-meyer">官網</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>3. 投資分析</h2>
+            <h3>資本增值 (Capital Appreciation)</h3>
+            <p>得益於地契類型（永久地契）和基礎設施的完善，具有很高的增值潛力。美雅路是新加坡少數幾個直通公園和大海，同時距離中央商務區不到10分鐘路程的住宅區之一。</p>
+            <h3>租金收益率 (Rental Yield)</h3>
+            <p>估計為 2.8% - 3.5%。One Meyer 等精品項目由於單位配置效率高，收益率得到優化。Meyerhouse 的大坪數奢華單位則優先考慮資本保全而非即時收益。</p>
+        </section>
+
+        <section>
+            <h2>4. 台灣國民法律程序</h2>
+            <p>台灣投資者被允許在新加坡購買非土地住宅物業（私人公寓）。<strong>注意：</strong> 根據目前的降溫措施，外籍國民須繳納 60% 的額外買方印花稅 (ABSD)。</p>
+
+            <h3>端到端購買流程</h3>
+            <div class="mermaid">
+                graph TD
+                    A[物業選擇與財務規劃] --> B[獲取貸款預審 IPA]
+                    B --> C[1% 權利金]
+                    C --> D[簽署 OTP]
+                    D --> E[律師審查]
+                    E --> F{核准}
+                    F -- 是 --> G[4% 執行費]
+                    G --> H[支付 BSD & 60% ABSD]
+                    H --> I[完工期 10-12週]
+                    I --> J[交屋鑰匙]
+            </div>
+        </section>
+
+        <section>
+            <h2>5. 標桿對比 (Comps)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>對比項目</th>
+                        <th>地契</th>
+                        <th>完工</th>
+                        <th>選取理由</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>安珀苑 (Amber Park)</td><td>永久</td><td>2023</td><td>規模與品牌標桿</td></tr>
+                    <tr><td>LIV @ MB</td><td>99年</td><td>2024</td><td>租賃地契底價標桿</td></tr>
+                    <tr><td>海岸線居 (Coastline Res.)</td><td>永久</td><td>2023</td><td>海景精品標桿</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="footer">
+            <p>機密執行研究報告 | 數據來源於 URA REALIS, EdgeProp 和開發商官方網站。</p>
+        </div>
+    </div>
+</body>
+</html>
