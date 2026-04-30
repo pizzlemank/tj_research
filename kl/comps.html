@@ -20,7 +20,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 1600px;
+            max-width: 1800px;
             margin: 20px auto;
             background: #fff;
             padding: 30px;
@@ -36,13 +36,14 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.9em;
-            min-width: 1200px;
+            font-size: 0.85em;
+            min-width: 1500px;
         }
         th, td {
             padding: 12px 10px;
             text-align: left;
             border-bottom: 1px solid #eee;
+            vertical-align: top;
         }
         th {
             background-color: var(--primary-color);
@@ -68,6 +69,9 @@
         }
         .status-uc { color: #f39c12; font-weight: bold; }
         .currency-sub { font-size: 0.85em; color: #666; display: block; }
+        .layout-list, .amenity-list { list-style: none; padding: 0; margin: 0; font-size: 0.9em; }
+        .layout-list li, .amenity-list li { margin-bottom: 4px; border-bottom: 1px dotted #ccc; padding-bottom: 2px; }
+        .amenity-category { font-weight: bold; color: var(--primary-color); display: block; margin-top: 5px; }
     </style>
 </head>
 <body>
@@ -83,12 +87,14 @@
                 <thead>
                     <tr>
                         <th>建案 (Project)</th>
+                        <th>樓層 (Floors)</th>
+                        <th>總戶數 (Units)</th>
                         <th>價格 (Price) <span class="currency-sub">MYR (NT$ 萬)</span></th>
-                        <th>面積/格局 (Size/Layout)</th>
                         <th>單價 (Unit Price) <span class="currency-sub">MYR psf (NT$ psf)</span></th>
+                        <th>詳細格局與面積 (Layouts &amp; Size)</th>
                         <th>屋齡 (Age)</th>
                         <th>產權 (Tenure)</th>
-                        <th>備註與服務 (Comments & Services)</th>
+                        <th>備註與設施服務 (Comments &amp; Services)</th>
                         <th>代銷網站 (Agency)</th>
                         <th>外部連結 (Links)</th>
                     </tr>
@@ -96,44 +102,95 @@
                 <tbody>
                     <tr>
                         <td><strong>TRX Residences</strong></td>
-                        <td>RM 550,000 - 11,000,000<br><span class="currency-sub">(NT$ 374.6萬 - 7,491萬)</span></td>
-                        <td>474 - 1,184 sqft<br>(1-3房)</td>
-                        <td>RM 1,800 - 2,300<br><span class="currency-sub">(NT$ 12,258 - 15,663)</span></td>
+                        <td>57</td>
+                        <td>896</td>
+                        <td>RM 1,042,800 - 9,635,000<br><span class="currency-sub">(NT$ 710.1萬 - 6,561.4萬)</span></td>
+                        <td>RM 2,200 - 2,500+<br><span class="currency-sub">(NT$ 14,982 - 17,025)</span></td>
+                        <td>
+                            <ul class="layout-list">
+                                <li>1房: 474 - 721 sqft</li>
+                                <li>2房: 850 - 1,076 sqft</li>
+                                <li>3房: 1,184 - 1,636 sqft</li>
+                                <li>4+房/頂樓: 2,160 - 3,854 sqft</li>
+                            </ul>
+                        </td>
                         <td>2025</td>
                         <td>永久產權 (Freehold)</td>
-                        <td><strong>高級服務式住宅</strong>。提供24小時禮賓、管家預約、洗衣服務。直通 The Exchange TRX 購物中心與10英畝空中公園。</td>
+                        <td>
+                            <ul class="amenity-list">
+                                <li><span class="amenity-category">水療健身：</span>無邊際泳池、兒童池、天際健身房、瑜珈平台</li>
+                                <li><span class="amenity-category">休閒會所：</span>Social Squircle 會所、私人電影院、遊戲室</li>
+                                <li><span class="amenity-category">景觀連接：</span>直通 10英畝中央公園、直通 The Exchange 購物廣場</li>
+                                <li><span class="amenity-category">科技安保：</span>智能家居系統、24/7 巡邏安保、共享辦公空間</li>
+                            </ul>
+                        </td>
                         <td class="links"><a href="https://www.taimaasset.com/trx" target="_blank">台馬地產</a></td>
                         <td class="links">
-                            <a href="https://www.google.com/maps/search/?api=1&query=TRX+Residences+Kuala+Lumpur" target="_blank">地點地圖</a>
-                            <a href="https://translate.google.com/translate?sl=en&tl=zh-TW&u=https://www.propertyguru.com.my/condo/trx-residences-18014" target="_blank">Property Guru (自動翻譯)</a>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=TRX+Residences+Kuala+Lumpur" target="_blank">地點地圖</a>
+                            <a href="https://translate.google.com/translate?sl=en&amp;tl=zh-TW&amp;u=https://www.propertyguru.com.my/condo/trx-residences-18014" target="_blank">Property Guru</a>
                         </td>
                     </tr>
                     <tr>
                         <td><strong>Core Residence @ TRX</strong></td>
-                        <td>RM 1,300,000 - 2,600,000<br><span class="currency-sub">(NT$ 885.3萬 - 1,770.6萬)</span></td>
-                        <td>624 - 1,022 sqft<br>(1-3房)</td>
-                        <td>RM 1,923 - 2,803<br><span class="currency-sub">(NT$ 13,096 - 19,088)</span></td>
+                        <td>50</td>
+                        <td>580</td>
+                        <td>RM 500,000 - 4,250,000<br><span class="currency-sub">(NT$ 340.5萬 - 2,894.3萬)</span></td>
+                        <td>RM 1,700 - 2,300+<br><span class="currency-sub">(NT$ 11,577 - 15,663)</span></td>
+                        <td>
+                            <ul class="layout-list">
+                                <li>Smart Suite (1房): 624 sqft</li>
+                                <li>Flexi Suite (1+1房): 688 sqft</li>
+                                <li>Premium Suite (2房): 817 - 839 sqft</li>
+                                <li>Elite Suite (2+1房): 925 sqft</li>
+                                <li>City Suite (2房): 1,011 sqft</li>
+                                <li>Comfort Suite (3房): 1,022 sqft</li>
+                            </ul>
+                        </td>
                         <td>2024</td>
                         <td>永久產權 (Freehold)</td>
-                        <td><strong>服務式住宅</strong>。鄰近 Exchange 106 摩天大樓。提供空中健身房、無邊際泳池、森林步道。直通 MRT 轉乘站。</td>
+                        <td>
+                            <ul class="amenity-list">
+                                <li><span class="amenity-category">水療健身：</span>50層天際無邊際泳池、7層泳池、天際健身房</li>
+                                <li><span class="amenity-category">休閒會所：</span>住戶休息室、多功能宴會廳、圖書館、遊戲室</li>
+                                <li><span class="amenity-category">景觀連接：</span>口袋花園、森林步道、步行可達 TRX 購物廣場</li>
+                                <li><span class="amenity-category">科技安保：</span>面部識別系統、智能門鎖、會議設施、閱覽室</li>
+                            </ul>
+                        </td>
                         <td class="links"><a href="https://www.mygo.com/international/building/seq/100021" target="_blank">MyGo 買購網</a></td>
                         <td class="links">
-                            <a href="https://www.google.com/maps/search/?api=1&query=Core+Residence+TRX" target="_blank">地點地圖</a>
-                            <a href="https://translate.google.com/translate?sl=en&tl=zh-TW&u=https://www.propertyguru.com.my/condo/core-residence-trx-13841" target="_blank">Property Guru (自動翻譯)</a>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Core+Residence+TRX" target="_blank">地點地圖</a>
+                            <a href="https://translate.google.com/translate?sl=en&amp;tl=zh-TW&amp;u=https://www.propertyguru.com.my/condo/core-residence-trx-13841" target="_blank">Property Guru</a>
                         </td>
                     </tr>
                     <tr>
                         <td><strong>Pavilion Square</strong></td>
-                        <td>RM 1,200,000 - 3,500,000<br><span class="currency-sub">(NT$ 817.2萬 - 2,383.5萬)</span></td>
-                        <td>504 - 1,272 sqft<br>(Studio-3房)</td>
-                        <td>RM 2,200 - 2,400<br><span class="currency-sub">(NT$ 14,982 - 16,344)</span></td>
+                        <td>67</td>
+                        <td>60</td>
+                        <td>RM 680,000 - 15,000,000<br><span class="currency-sub">(NT$ 463.1萬 - 10,215萬)</span></td>
+                        <td>RM 2,100 - 2,500+<br><span class="currency-sub">(NT$ 14,301 - 17,025)</span></td>
+                        <td>
+                            <ul class="layout-list">
+                                <li>Studio: 504 sqft</li>
+                                <li>1房 (+Study): 770 - 772 sqft</li>
+                                <li>2房: 966 - 1,272 sqft</li>
+                                <li>3房: 1,255 - 2,464 sqft</li>
+                                <li>頂樓 (Penthouse): ~9,770 sqft</li>
+                            </ul>
+                        </td>
                         <td><span class="status-uc">2028 (施工中)</span></td>
                         <td>99年租賃產權 (Leasehold)</td>
-                        <td><strong>高級服務式住宅</strong>。位於武吉免登(Bukit Bintang)。擁有 118米全馬最長空中無邊際泳池。空橋直達 Pavilion KL 購物中心。</td>
+                        <td>
+                            <ul class="amenity-list">
+                                <li><span class="amenity-category">水療健身：</span>高層無邊際泳池、進階健身中心、運動工作室</li>
+                                <li><span class="amenity-category">休閒會所：</span>雪茄休息室、酒吧、頂級廚房、桑拿蒸汽室</li>
+                                <li><span class="amenity-category">景觀連接：</span>天際線觀景平台、空橋直達 Pavilion KL 購物中心</li>
+                                <li><span class="amenity-category">科技安保：</span>代客泊車服務、多重安保系統、行政商務中心</li>
+                            </ul>
+                        </td>
                         <td class="links"><a href="https://www.mygo.com/international/building/seq/100040" target="_blank">MyGo 買購網</a></td>
                         <td class="links">
-                            <a href="https://www.google.com/maps/search/?api=1&query=Pavilion+Square+Kuala+Lumpur" target="_blank">地點地圖</a>
-                            <a href="https://translate.google.com/translate?sl=en&tl=zh-TW&u=https://www.propertyguru.com.my/condo/pavilion-square-18287" target="_blank">Property Guru (自動翻譯)</a>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Pavilion+Square+Kuala+Lumpur" target="_blank">地點地圖</a>
+                            <a href="https://translate.google.com/translate?sl=en&amp;tl=zh-TW&amp;u=https://www.propertyguru.com.my/condo/pavilion-square-18287" target="_blank">Property Guru</a>
                         </td>
                     </tr>
                 </tbody>
