@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大將開發 | 市場調查</title>
+    <title>大將開發 | 全球房地產市場調查</title>
     <style>
         :root {
             --primary-color: #1a2a6c;
@@ -25,59 +25,120 @@
         }
         .header-image {
             width: 100%;
-            height: 300px;
-            background-image: url('https://images.unsplash.com/photo-1522810358482-628d0979d38c?q=80&w=1600&auto=format&fit=crop');
+            height: 250px;
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             width: 90%;
-            margin-top: -50px;
+            margin-top: -60px;
             background: white;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             text-align: center;
+            margin-bottom: 50px;
         }
         .logo-text {
             font-weight: 900;
-            font-size: 1.8em;
+            font-size: 2em;
             color: var(--primary-color);
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
         .subtitle {
-            font-size: 1.4em;
+            font-size: 1.2em;
             color: var(--secondary-color);
             margin-bottom: 40px;
             font-weight: 600;
+            letter-spacing: 1px;
         }
-        .nav-links {
+
+        /* 3-Column Layout */
+        .market-grid {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .market-column {
+            flex: 1;
+            min-width: 250px;
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            border-top: 5px solid var(--primary-color);
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        .market-column:hover {
+            transform: translateY(-5px);
+        }
+        .flag-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        .market-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .link-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
         }
         .nav-btn {
             display: block;
-            background: var(--primary-color);
-            color: white;
-            padding: 18px;
-            border-radius: 8px;
+            background: white;
+            color: var(--primary-color);
+            padding: 12px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 0.95em;
+            border: 1px solid #ddd;
             transition: all 0.3s ease;
         }
         .nav-btn:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
         }
+        .btn-manual {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        .btn-manual:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+
         .footer {
             margin-top: auto;
             padding: 40px;
             color: #999;
             font-size: 0.85em;
+            text-align: center;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .market-grid {
+                flex-direction: column;
+            }
+            .market-column {
+                width: 100%;
+                min-width: unset;
+                box-sizing: border-box;
+            }
         }
     </style>
 </head>
@@ -87,16 +148,42 @@
 
     <div class="container">
         <div class="logo-text">大將開發 | 市場調查</div>
-        <div class="subtitle">新加坡 D15 East Coast / Marine Parade 高端住宅</div>
+        <div class="subtitle">GLOBAL REAL ESTATE RESEARCH DIRECTORY</div>
 
-        <div class="nav-links">
-            <a href="comps.html" class="nav-btn">建案數據對照表</a>
-            <a href="shareable_report_zh.html" class="nav-btn">市場研究概況</a>
+        <div class="market-grid">
+            <!-- Houston -->
+            <div class="market-column" style="border-top-color: #3C3B6E;">
+                <div class="flag-icon">🇺🇸</div>
+                <div class="market-title">休士頓 (Houston)</div>
+                <div class="link-group">
+                    <a href="https://tinyurl.com/jp3v3zjd" class="nav-btn btn-manual" target="_blank">市場成交對照 (HAR Map)</a>
+                </div>
+            </div>
+
+            <!-- Singapore -->
+            <div class="market-column" style="border-top-color: #EF3340;">
+                <div class="flag-icon">🇸🇬</div>
+                <div class="market-title">新加坡 (Singapore)</div>
+                <div class="link-group">
+                    <a href="sg/comps.html" class="nav-btn">建案數據對照表</a>
+                    <a href="sg/executive_summary_zh.html" class="nav-btn">市場研究報告</a>
+                </div>
+            </div>
+
+            <!-- Kuala Lumpur -->
+            <div class="market-column" style="border-top-color: #010066;">
+                <div class="flag-icon">🇲🇾</div>
+                <div class="market-title">吉隆坡 (KL)</div>
+                <div class="link-group">
+                    <a href="kl/comps.html" class="nav-btn">建案數據對照表</a>
+                    <a href="kl/executive_summary_zh.html" class="nav-btn">市場研究報告</a>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="footer">
-        &copy; 2026 大將開發. 內部研究專用資料。
+        &copy; 2026 大將開發. 內部研究專用資料。限執行決策層參閱。
     </div>
 
 </body>
