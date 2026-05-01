@@ -3,7 +3,7 @@
 ## Executive Summary / 執行摘要
 *   **Premier Financial District Living:** TRX Residences is the flagship residential component of the Tun Razak Exchange, Malaysia's first international financial district.
 *   **頂級金融區生活：** TRX Residences 是馬來西亞首個國際金融區——敦拉薩國際貿易中心 (TRX) 的旗艦住宅項目。
-*   **Lendlease & TRX City Partnership:** A strategic 60:40 joint venture between global developer Lendlease and the Malaysian Ministry of Finance’s TRX City.
+*   **Lendlease &amp; TRX City Partnership:** A strategic 60:40 joint venture between global developer Lendlease and the Malaysian Ministry of Finance’s TRX City.
 *   **Lendlease 與 TRX City 合作：** 全球開發商 Lendlease 與馬來西亞財政部旗下的 TRX City 之間 60:40 的戰略合資項目。
 *   **Unrivaled Connectivity:** Direct 70m access to Kuala Lumpur's only MRT interchange station and seamless integration with a 10-acre rooftop park and The Exchange TRX mall.
 *   **無與倫比的交通連線性：** 直通 70 公尺外的吉隆坡唯一捷運轉乘站，並與 10 英畝的空中公園及 The Exchange TRX 購物廣場無縫整合。
@@ -25,13 +25,13 @@
 
 ---
 
-## 2. Builder & Developer Profile
+## 2. Builder &amp; Developer Profile
 ### **Joint Venture Partnership**
 The project is developed by **Lendlease TRX City Sdn Bhd**, a 60:40 joint venture between:
-*   **Lendlease (60%):** An Australian-headquartered global real estate and investment group with a track record of large-scale urban regenerations like Barangaroo (Sydney), Elephant & Castle (London), and Paya Lebar Quarter (Singapore).
+*   **Lendlease (60%):** An Australian-headquartered global real estate and investment group with a track record of large-scale urban regenerations like Barangaroo (Sydney), Elephant &amp; Castle (London), and Paya Lebar Quarter (Singapore).
 *   **TRX City Sdn Bhd (40%):** The master developer of the Tun Razak Exchange and a wholly-owned subsidiary of Malaysia’s **Ministry of Finance (MOF)**.
 
-### **Architectural & Design Team**
+### **Architectural &amp; Design Team**
 The project features a collaborative effort from world-renowned architectural firms:
 *   **Grimshaw Architects:** Known for sustainable design (e.g., Eden Project, London Waterloo).
 *   **GDP Architects:** A leading Malaysian firm.
@@ -40,7 +40,7 @@ The project features a collaborative effort from world-renowned architectural fi
 
 ---
 
-## 3. Key Differentiators & Innovations
+## 3. Key Differentiators &amp; Innovations
 ### **Sustainability: The "Double Gold" Standard**
 TRX Residences is one of the few residential projects in Malaysia targeting dual certification:
 *   **LEED Gold** (U.S. Green Building Council).
@@ -51,13 +51,13 @@ TRX Residences is one of the few residential projects in Malaysia targeting dual
 *   **Smart Community App:** A centralized platform for access control (no physical cards), visitor management, facility booking, and remote control of home lighting and air-conditioning.
 *   **Integration:** The app links residents directly to exclusive offers within **The Exchange TRX mall** and services from the **Kimpton Hotel**.
 
-### **Connectivity & Infrastructure**
+### **Connectivity &amp; Infrastructure**
 *   **MRT Interchange:** 70 meters to the Tun Razak Exchange MRT Station—the only interchange between MRT Line 1 (Kajang) and Line 2 (Putrajaya).
 *   **Vehicular Access:** Direct "tunnel" access to the SMART Tunnel and SPE Highway, bypassing typical KL surface traffic.
 
 ---
 
-## 4. Reviews & Market Sentiment
+## 4. Reviews &amp; Market Sentiment
 ### **Professional Reviews**
 *   **iHerng (Property YouTuber/Analyst):** Highlighted the "direct integration" as a major plus, noting that while other nearby projects like Core Residence offer more privacy, TRX Residences is the "true center" of the masterplan.
 *   **CBRE | WTW:** Classified the project as "Institutional Grade," noting its appeal to high-level executives working for the district's anchor tenants (HSBC, Prudential, Affin Bank).
@@ -68,19 +68,19 @@ TRX Residences is one of the few residential projects in Malaysia targeting dual
 
 ---
 
-## 5. Awards & Recognition
+## 5. Awards &amp; Recognition
 TRX Residences and the master developer have clinched numerous prestigious accolades:
 *   **PropertyGuru Asia Property Awards 2024:**
     *   Winner: Best High-Rise Development (Malaysia).
     *   Winner: Sustainable Design Champion.
-*   **MOSHPA (Malaysian Society for Occupational Safety & Health) 2022/2023:**
+*   **MOSHPA (Malaysian Society for Occupational Safety &amp; Health) 2022/2023:**
     *   Gold Award for OSH Management in Construction.
 *   **Anugerah Khas Datuk Bandar (Kuala Lumpur Mayor's Award) 2023:**
     *   Gold Rating for Green Building.
 
 ---
 
-## 6. Publications & Official Data
+## 6. Publications &amp; Official Data
 *   **Lendlease Media (2023):** Reported 90% sales of available units, with Tower A completely sold out during the pre-sales phase.
 *   **The Star / EdgeProp:** Noted the project's ability to secure Strata Titles ahead of the Certificate of Completion and Compliance (CCC), a rarity in the Malaysian market that signals high developer diligence.
 *   **Knight Frank Research:** Identifies TRX as the "new CBD" that will eventually host 45,000 workers, providing a massive pool for rental demand.

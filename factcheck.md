@@ -33,7 +33,7 @@ This document records the verification of data for the Singapore and Kuala Lumpu
 | Core Residence PSF | RM 1,700 - 2,300| **RM 1,971 - 3,447**| **Updated** | iProperty (market data) |
 | KLCC 10-Year Index | +4.2% | +4.2% | Correct | NAPIC / Knight Frank |
 
-## 4. Discrepancies & Corrections
+## 4. Discrepancies &amp; Corrections
 
 1. **Exchange Rate Shift**: Significant appreciation of MYR against TWD (from 6.81 to 8.01, a ~17.6% increase). All TWD conversions in the KL report were outdated.
 2. **SG Project Updates**:
