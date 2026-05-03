@@ -101,22 +101,129 @@
         <h2>二、 購置路徑與實體架構 (外籍投資者)</h2>
         <div class="mermaid">
 graph TD
-    A[外籍投資者] --> C[個人名義購買]
+    A[外籍投資者] --> B[方案 A: 直接外資購買]
+    A --> K[方案 B: MM2H 居留簽證路徑]
+
+    subgraph "方案 A: 直接購買 (Standard Foreign Purchase)"
+    B --> C[個人名義購買]
     C --> D[簽署買賣合約 SPA]
     D --> E[申請州政府准令 Consent]
     E --> F[印花稅與產權轉讓 MOT]
     F --> G[持有物業]
+    end
+
+    subgraph "方案 B: MM2H 路徑 (2024 新制)"
+    K --> L{選擇等級}
+    L -- 鉑金 Platinum --> M[100萬 USD 存款]
+    L -- 黃金 Gold --> N[50萬 USD 存款]
+    L -- 白銀 Silver --> O[15萬 USD 存款]
+    M & N & O --> P[取得居留簽證]
+    P --> Q[強制購置房產]
+    Q --> G
+    end
 
     A -. 節稅與傳承考量 .-> H[實體架構 Option]
     H --> I[Labuan IBC 或 外資公司]
     I --> D
 
     subgraph "合規與申報"
-    C -- "稅務居民/非居民申報" --> G
+    G -- "稅務居民/非居民申報" --> Z[稅務申報]
     end
         </div>
 
-        <h2>三、 交易摩擦成本與淨收益 (NOI)</h2>
+        <h2>三、 MM2H (馬來西亞我的第二家園) 2024 新制分析</h2>
+        <p>對於高淨值客戶而言，MM2H 不再僅是「養老簽證」，而是與房地產投資深度綁定的長期居留方案。2024 年推出的新制將計畫分為三個等級，其核心要求與權益如下：</p>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>等級 (Tier)</th>
+                        <th>定期存款要求 (USD)</th>
+                        <th>強制購屋最低門檻</th>
+                        <th>簽證期限</th>
+                        <th>政府參與費 (一次性)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>鉑金 (Platinum)</strong></td>
+                        <td>$1,000,000</td>
+                        <td>RM 2,000,000</td>
+                        <td>20年 (可續簽)</td>
+                        <td>RM 200,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>黃金 (Gold)</strong></td>
+                        <td>$500,000</td>
+                        <td>RM 1,000,000</td>
+                        <td>15年 (可續簽)</td>
+                        <td>RM 3,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>白銀 (Silver)</strong></td>
+                        <td>$150,000</td>
+                        <td>RM 600,000</td>
+                        <td>5年 (可續簽)</td>
+                        <td>RM 1,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p><strong>關鍵規定：</strong>
+            <ul>
+                <li><strong>房產持有期：</strong> 透過 MM2H 路徑購買的房產，必須持有至少 10 年。</li>
+                <li><strong>存款提取：</strong> 一年後可提取最高 50% 的存款用於購置房產、醫療或馬來西亞境內旅遊。</li>
+                <li><strong>居住要求：</strong> 每年須在馬來西亞居住至少 90 天（或由主申請人及配偶共同累計）。</li>
+            </ul>
+        </p>
+
+        <h2>四、 方案可行性客觀對照：直接購買 vs. MM2H</h2>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>比較維度</th>
+                        <th>方案 A: 直接外資購買</th>
+                        <th>方案 B: MM2H 路徑 (鉑金/黃金)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>資金效率</strong></td>
+                        <td>高。資金僅鎖定在房產本身。</td>
+                        <td>低。需額外鎖定大量美金存款於低利定存帳戶。</td>
+                    </tr>
+                    <tr>
+                        <td><strong>居留權益</strong></td>
+                        <td>無。僅能以觀光簽證停留 (通常90天)。</td>
+                        <td>極高。享有多年的多次入境居住權，不限進出。</td>
+                    </tr>
+                    <tr>
+                        <td><strong>購屋限制</strong></td>
+                        <td>需符合各州外資最低購買門檻 (KL 為 RM 100萬)。</td>
+                        <td>強制購置房產，且有更高的最低門檻要求。</td>
+                    </tr>
+                    <tr>
+                        <td><strong>稅務身份</strong></td>
+                        <td>通常為「非稅務居民」(租金所得稅 30%)。</td>
+                        <td>若居住滿 182 天可成為「稅務居民」，適用累進稅率。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p><strong>大將開發方案可行性評估：</strong><br>
+        對於<strong>極高淨值客戶 (UHNW)</strong>，選擇路徑取決於「資金效率」與「居留需求」的權衡：
+        <ul>
+            <li><strong>追求資金流動性：</strong>若客戶目標僅為分散資產配置至林吉特資產，<strong>方案 A (直接購買)</strong> 最為可行。其優勢在於不需在馬來西亞銀行鎖定大量低利率美金存款（高達 100 萬美金），且購置門檻僅需符合州政府規定（KL 區為 RM 100 萬），資金進出更具彈性。</li>
+            <li><strong>追求長期身分保障：</strong>若客戶重視在東南亞的長期落腳點、商務便利性或子女教育環境，<strong>方案 B (MM2H 鉑金等級)</strong> 雖有 100 萬美金的存款鎖定要求，但其提供的 20 年長期居留權、免除工作證即可經商/工作的權益，以及在馬來西亞銀行體系的優先順位，對於 UHNW 而言可視為一種「身分保險」。</li>
+        </ul>
+        從純財務投資角度看，方案 A 較優；從綜合生活與長期規畫角度看，方案 B 鉑金等級更具戰略價值。
+        </p>
+
+        <h2>五、 交易摩擦成本與淨收益 (NOI)</h2>
         <div class="table-responsive">
             <table>
                 <thead>
@@ -159,7 +266,7 @@ graph TD
         <p><strong>淨營運收益 (NOI) 計算預估：</strong><br>
         以 TRX 兩房單位為例，預估總租金收益率約 4.5% - 5.0%。扣除物業管理費 (RM 0.85/psf)、維修基金、年度地稅與 30% 非居民所得稅後，<strong>預估淨收益 (Net Yield) 約為 2.8% - 3.2%</strong>。需 2.5 至 3 年之淨收益方可回收初始購置之印花稅成本。針對外籍買家，無論持美國或台灣護照，其在馬來西亞購置不動產之法律程序基本一致，均需符合州政府最低購買門檻限制。</p>
 
-        <h2>四、 匯率風險與實體規劃</h2>
+        <h2>六、 匯率風險與實體規劃</h2>
         <p>馬來西亞林吉特 (MYR) 近年相對美元與新台幣有所回升。截至 2026年5月1日，MYR 對 TWD 約為 8.01。雖然匯率波動仍存，但建議投資者以長期持有為目標，以緩解匯率波動帶來的短期賬面損失。</p>
 
         <div class="footer">

@@ -36,6 +36,10 @@ This document records the verification of data for the Singapore and Kuala Lumpu
 | Lendlease Projects | N/A | PLQ, Jem, Parkway, TRX Mall | New | Lendlease Official |
 | TRX Structure Type | N/A | RC (Reinforced Concrete) | New | Construction Specs |
 | TRX 1BR Rent | N/A | RM 4,500 - 6,000 | New | PropertyGuru May 2026 |
+| MM2H Platinum FD | N/A | USD 1,000,000 | New | MOTAC 2024 Rules |
+| MM2H Gold FD | N/A | USD 500,000 | New | MOTAC 2024 Rules |
+| MM2H Silver FD | N/A | USD 150,000 | New | MOTAC 2024 Rules |
+| MM2H Participation Fee | N/A | RM 200k (Plat) / 3k (Gold) / 1k (Silver) | New | MOTAC 2024 Rules |
 
 ## 4. Discrepancies &amp; Corrections
 
