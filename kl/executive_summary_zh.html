@@ -98,11 +98,17 @@
             本報告的核心建案 <strong>TRX Residences</strong> 是由 Lendlease 與 TRX City 以 60:40 的股權比例共同開發。該項目深度整合了 10 英畝的空中公園與超過 200 萬平方英尺的零售空間，並具備馬來西亞罕見的雙捷運（MRT Line 1 &amp; 2）轉乘站直達。這不僅是一個住宅項目，更是馬來西亞推動金融轉型與全球企業總部（如匯豐、保誠）入駐的關鍵配套設施，具備極高的流動性與企業租賃潛力。
         </p>
 
-        <h2>二、 購置路徑與實體架構 (外籍投資者)</h2>
+        <h2>二、 購置路徑與 MM2H 簽證選項 (Purchase Path & MM2H)</h2>
+        <p>外籍投資者在馬來西亞購置不動產，除了標準的商業投資路徑外，常結合「第二家園」(MM2H) 計畫。2026 年現行政策下，MM2H 分為三層級（鉑金、黃金、白銀），不同層級對物業購置金額與持有期限有特定要求，但法律轉讓程序基本一致。</p>
         <div class="mermaid">
 graph TD
-    A[外籍投資者] --> C[個人名義購買]
+    A[外籍投資者] --> B{居留計畫選項}
+    B -->|標準投資路徑| C[一般外籍人士/公司]
+    B -->|長期居留路徑| MM[MM2H 簽證持有人]
+
     C --> D[簽署買賣合約 SPA]
+    MM --> D
+
     D --> E[申請州政府准令 Consent]
     E --> F[印花稅與產權轉讓 MOT]
     F --> G[持有物業]
@@ -113,6 +119,7 @@ graph TD
 
     subgraph "合規與申報"
     C -- "稅務居民/非居民申報" --> G
+    MM -- "享部分特定匯率或融資便利" --> G
     end
         </div>
 
@@ -161,6 +168,43 @@ graph TD
 
         <h2>四、 匯率風險與實體規劃</h2>
         <p>馬來西亞林吉特 (MYR) 近年相對美元與新台幣有所回升。截至 2026年5月1日，MYR 對 TWD 約為 8.01。雖然匯率波動仍存，但建議投資者以長期持有為目標，以緩解匯率波動帶來的短期賬面損失。</p>
+
+        <h2>五、 市場透明度與實價查詢工具 (Data Sources)</h2>
+        <p>
+            馬來西亞不動產市場具備多個「實價登錄」參考管道。對於執行決策層，建議交叉比對以下數據源以評估真實成交價與市場趨勢：
+        </p>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>數據來源平台</th>
+                        <th>性質與核心價值</th>
+                        <th>外部連結 (外部網址)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>NAPIC (官方)</strong></td>
+                        <td>政府國家房地產數據中心，最權威的成交數據源。</td>
+                        <td><a href="https://napic.jpph.gov.my/en" target="_blank">napic.jpph.gov.my</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Brickz.my</strong></td>
+                        <td>民間數據整合平台，將官方數據圖像化，易於查詢特定建案。</td>
+                        <td><a href="https://www.brickz.my/" target="_blank">brickz.my</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>iRumah.co</strong></td>
+                        <td>新興數據分析平台，側重於區域價格熱圖與歷史趨勢。</td>
+                        <td><a href="https://irumah.co/" target="_blank">irumah.co</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="exec-summary" style="background: #fff3cd; border-left: 5px solid #ffc107; padding: 15px; margin-top: 10px; font-size: 0.9em;">
+            <strong>數據滯後性警告 (Data Lag)：</strong>
+            馬來西亞的成交數據登記流程通常涉及「簽署合約 (SPA)」、「州政府准令審核」到最終「產權轉讓登記」，整體週期長達數月甚至一年。因此，上述平台所顯示的「實價」通常存在 <strong>6 個月至 2 年的滯後</strong>。在評估如 TRX 這種快速發展的區域時，應結合當前開發商的掛牌價 (Asking Price) 與最近期的仲介端數據進行校準。
+        </div>
 
         <div class="footer">
             <p><strong>引用來源：</strong></p>
