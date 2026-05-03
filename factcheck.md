@@ -32,6 +32,10 @@ This document records the verification of data for the Singapore and Kuala Lumpu
 | TRX Residences Status| 2025 Completion | 2025 Completion | Correct | iProperty / Lendlease |
 | Core Residence PSF | RM 1,700 - 2,300| **RM 1,971 - 3,447**| **Updated** | iProperty (market data) |
 | KLCC 10-Year Index | +4.2% | +4.2% | Correct | NAPIC / Knight Frank |
+| TRX Total Site Area | 70 acres | 70 acres (28.3 ha) | New | TRX Masterplan |
+| Lendlease Projects | N/A | PLQ, Jem, Parkway, TRX Mall | New | Lendlease Official |
+| TRX Structure Type | N/A | RC (Reinforced Concrete) | New | Construction Specs |
+| TRX 1BR Rent | N/A | RM 4,500 - 6,000 | New | PropertyGuru May 2026 |
 
 ## 4. Discrepancies &amp; Corrections
 

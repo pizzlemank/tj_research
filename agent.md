@@ -14,6 +14,10 @@ Mobile UI Constraints: * Wrap all Markdown tables in: <div class="table-responsi
 
 NEVER use collapsible UI elements (accordions, dropdowns). All navigation must be simple, flat, and vertically scrollable.
 
+Content & Tone Constraints:
+* NO SALESMAN SPEAK: Do not use promotional ad copy, marketing fluff, or "realtor-style" persuasive language (e.g., "most anticipated core asset," "unrivaled opportunity"). Maintain a neutral, analytical, and data-driven tone.
+* FACT-CHECKING PROTOCOL: You must update and run checks against `factcheck.md` after every significant data update. This is non-negotiable.
+
 General Citation Rule (Non-Comps): Provide TWO links for sources: [原始來源 (Original)] (URL) | [中文翻譯 (Translated)] (Translated_URL)
 
 PART 2: REPOSITORY &amp; DIRECTORY STRUCTURE
