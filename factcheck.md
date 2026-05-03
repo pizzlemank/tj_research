@@ -36,6 +36,8 @@ This document records the verification of data for the Singapore and Kuala Lumpu
 | Lendlease Projects | N/A | PLQ, Jem, Parkway, TRX Mall | New | Lendlease Official |
 | TRX Structure Type | N/A | RC (Reinforced Concrete) | New | Construction Specs |
 | TRX 1BR Rent | N/A | RM 4,500 - 6,000 | New | PropertyGuru May 2026 |
+| Data Lag (KL) | N/A | 6 months - 2 years | New | NAPIC / Valuation Dept |
+| Corridor Width (TRX)| N/A | 1.3m | New | Site Measurement / Spec |
 
 ## 4. Discrepancies &amp; Corrections
 
