@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大將開發 | 房地產市場調查報告 (BETA)</title>
+    <style>
+        :root {
+            --primary-color: #1a2a6c;
+            --secondary-color: #b21f1f;
+            --accent-color: #fdbb2d;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+        }
+        body {
+            font-family: 'PingFang TC', 'Heiti TC', 'Microsoft JhengHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            font-size: 1.3rem; /* CR4: 1.3rem minimum */
+        }
+        .header-image {
+            width: 100%;
+            height: 250px;
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&amp;w=1600&amp;auto=format&amp;fit=crop');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 1100px;
+            width: 95%;
+            margin-top: -60px;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .logo-text {
+            font-weight: 900;
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .market-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+        }
+        .market-column {
+            width: 100%;
+            max-width: 800px;
+            background: #f9f9f9;
+            padding: 35px;
+            border-radius: 10px;
+            border-top: 8px solid #3C3B6E;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .flag-icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+        .market-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+
+        .portal-form {
+            width: 100%;
+            margin-top: 10px;
+            text-align: left;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .portal-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 1.3rem; /* CR4 */
+            color: var(--primary-color);
+        }
+        .portal-form select {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 1.3rem; /* CR4 */
+            background-color: white;
+        }
+        .portal-form .toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        .portal-form .toggle-container label {
+            margin-bottom: 0;
+        }
+        .portal-form input[type="checkbox"] {
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .portal-form .go-btn {
+            width: 100%;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.5rem; /* CR4++ */
+        }
+        .portal-form .go-btn:hover {
+            background: #901a1a;
+            transform: translateY(-2px);
+        }
+        .portal-form .sold-btn {
+            background: #444;
+        }
+        .portal-form .sold-btn:hover {
+            background: #222;
+        }
+
+        .link-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            margin-top: 30px;
+        }
+        .nav-btn {
+            display: block;
+            background: white;
+            color: var(--primary-color);
+            padding: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem; /* CR4 */
+            border: 2px solid #ddd;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .nav-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 40px;
+            color: #999;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-image"></div>
+
+    <div class="container">
+        <div class="logo-text">大將開發 | 房地產市場調查報告 (BETA)</div>
+        <div class="subtitle">GLOBAL REAL ESTATE RESEARCH DIRECTORY</div>
+
+        <div class="market-grid">
+            <!-- Houston -->
+            <div class="market-column">
+                <div class="flag-icon">🇺🇸</div>
+                <div class="market-title">休士頓 (Houston) Bellaire &amp; West U 區域搜尋門戶</div>
+
+                <div class="portal-form">
+                    <label for="min_price">最低價格</label>
+                    <select id="min_price">
+                        <option value="700000">700k</option>
+                        <option value="750000">750k</option>
+                        <option value="800000" selected>800k</option>
+                        <option value="850000">850k</option>
+                        <option value="900000">900k</option>
+                        <option value="950000">950k</option>
+                        <option value="1000000">1 Mil</option>
+                        <option value="1100000">1.1 Mil</option>
+                        <option value="1200000">1.2 Mil</option>
+                        <option value="1300000">1.3 Mil</option>
+                        <option value="1400000">1.4 Mil</option>
+                        <option value="1500000">1.5 Mil</option>
+                        <option value="1600000">1.6 Mil</option>
+                        <option value="1700000">1.7 Mil</option>
+                        <option value="1800000">1.8 Mil</option>
+                        <option value="1900000">1.9 Mil</option>
+                        <option value="2000000">2.0 Mil</option>
+                        <option value="2200000">2.2 Mil</option>
+                        <option value="2400000">2.4 Mil</option>
+                    </select>
+
+                    <label for="max_price">最高價格</label>
+                    <select id="max_price">
+                        <option value="700000">700k</option>
+                        <option value="750000">750k</option>
+                        <option value="800000">800k</option>
+                        <option value="850000">850k</option>
+                        <option value="900000">900k</option>
+                        <option value="950000">950k</option>
+                        <option value="1000000">1 Mil</option>
+                        <option value="1100000">1.1 Mil</option>
+                        <option value="1200000">1.2 Mil</option>
+                        <option value="1300000" selected>1.3 Mil</option>
+                        <option value="1400000">1.4 Mil</option>
+                        <option value="1500000">1.5 Mil</option>
+                        <option value="1600000">1.6 Mil</option>
+                        <option value="1700000">1.7 Mil</option>
+                        <option value="1800000">1.8 Mil</option>
+                        <option value="1900000">1.9 Mil</option>
+                        <option value="2000000">2.0 Mil</option>
+                        <option value="2200000">2.2 Mil</option>
+                        <option value="2400000">2.4 Mil</option>
+                    </select>
+
+                    <label for="bedrooms">最少臥室</label>
+                    <select id="bedrooms">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+
+                    <label for="year_built">最早建築年份</label>
+                    <select id="year_built">
+                        <!-- Will be populated by JS -->
+                    </select>
+
+                    <div class="toggle-container">
+                        <label for="elevator">配備電梯 (中介填寫信息,不保證準確性)</label>
+                        <input type="checkbox" id="elevator">
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="go-btn" onclick="launchSearch('active')">前往搜尋 (出售中)</button>
+                        <button class="go-btn sold-btn" onclick="launchSearch('sold')">查看成交紀錄 (已成交)</button>
+                    </div>
+                </div>
+
+                <div class="link-group">
+                    <!-- CR1: Presets with standard SFH title -->
+                    <a href="https://www-har-com.translate.goog/search/dosearch?map_tools_nwlat=29.73015050494226&map_tools_nwlng=-95.50296465067473&map_tools_selat=29.67026875835286&map_tools_selng=-95.41139181209721&map_tools_polygon=POLYGON+%28%28-95.493669+29.677612%2C+-95.493669+29.678506%2C+-95.494183+29.680367%2C+-95.494183+29.682749%2C+-95.494012+29.683344%2C+-95.494012+29.684237%2C+-95.493755+29.684907%2C+-95.493755+29.685577%2C+-95.493241+29.687215%2C+-95.493241+29.689522%2C+-95.493498+29.692574%2C+-95.493498+29.696593%2C+-95.493755+29.697784%2C+-95.493755+29.699496%2C+-95.494012+29.70091%2C+-95.493926+29.704482%2C+-95.494098+29.70731%2C+-95.493755+29.709245%2C+-95.493498+29.709617%2C+-95.493755+29.712445%2C+-95.493755+29.715422%2C+-95.494012+29.716315%2C+-95.494012+29.722268%2C+-95.493669+29.723681%2C+-95.493777+29.722787%2C+-95.493318+29.723188%2C+-95.491719+29.723682%2C+-95.491364+29.724056%2C+-95.491286+29.724489%2C+-95.490429+29.724602%2C+-95.488955+29.725488%2C+-95.487757+29.726137%2C+-95.482102+29.72636%2C+-95.477952+29.725607%2C+-95.475338+29.725756%2C+-95.471563+29.726009%2C+-95.468822+29.726492%2C+-95.464489+29.727262%2C+-95.462319+29.727797%2C+-95.459902+29.729003%2C+-95.457999+29.729472%2C+-95.456741+29.730601%2C+-95.455027+29.730601%2C+-95.453999+29.730229%2C+-95.433435+29.729039%2C+-95.433435+29.728369%2C+-95.433007+29.726732%2C+-95.433007+29.725988%2C+-95.432835+29.725765%2C+-95.432835+29.724649%2C+-95.432493+29.722788%2C+-95.432493+29.720779%2C+-95.43275+29.72011%2C+-95.433007+29.716166%2C+-95.433178+29.715794%2C+-95.433178+29.708873%2C+-95.433007+29.70411%2C+-95.43275+29.703292%2C+-95.432493+29.701133%2C+-95.432493+29.698603%2C+-95.43215+29.696296%2C+-95.432064+29.691904%2C+-95.432236+29.690937%2C+-95.433607+29.69116%2C+-95.434035+29.691383%2C+-95.43472+29.692127%2C+-95.435149+29.692127%2C+-95.436348+29.690639%2C+-95.436862+29.690341%2C+-95.437976+29.690043%2C+-95.439604+29.690192%2C+-95.441318+29.690937%2C+-95.441918+29.690937%2C+-95.443032+29.690639%2C+-95.444659+29.689076%2C+-95.448601+29.686396%2C+-95.449458+29.685652%2C+-95.449629+29.68528%2C+-95.4504+29.684684%2C+-95.450657+29.684237%2C+-95.451343+29.683865%2C+-95.452799+29.683419%2C+-95.456226+29.681632%2C+-95.458368+29.680143%2C+-95.460425+29.679324%2C+-95.461282+29.679176%2C+-95.465823+29.67925%2C+-95.467022+29.678729%2C+-95.467022+29.67858%2C+-95.469336+29.678133%2C+-95.471049+29.677538%2C+-95.472592+29.677538%2C+-95.474219+29.677315%2C+-95.476447+29.676719%2C+-95.47936+29.676421%2C+-95.482359+29.6759%2C+-95.486643+29.6759%2C+-95.488271+29.676123%2C+-95.490328+29.67657%2C+-95.493669+29.677612%2C+-95.493669+29.677612%29%29&for_sale=1&property_class_id=1&listing_price_min=800000&listing_price_max=1300000&mp_term_years=30&mp_mortgage_rate=6.46&mp_down_payment_rate=20&bedroom_min=3&square_feet_min=2500&year_built_min=1990&sort=listdate+desc&view=map&_x_tr_sl=auto&_x_tr_tl=zh-TW&_x_tr_hl=en&_x_tr_pto=wapp&_x_tr_hist=true" class="nav-btn" target="_blank">獨立洋房 (Single Family Home / 3 臥室以上/建坪 2,500 sq ft 以上/1990 年後完工) [80萬-130萬]</a>
+
+                    <a href="https://www-har-com.translate.goog/search/dosearch?map_tools_nwlat=29.73015050494226&map_tools_nwlng=-95.50296465067473&map_tools_selat=29.67026875835286&map_tools_selng=-95.41139181209721&map_tools_polygon=POLYGON+%28%28-95.493669+29.677612%2C+-95.493669+29.678506%2C+-95.494183+29.680367%2C+-95.494183+29.682749%2C+-95.494012+29.683344%2C+-95.494012+29.684237%2C+-95.493755+29.684907%2C+-95.493755+29.685577%2C+-95.493241+29.687215%2C+-95.493241+29.689522%2C+-95.493498+29.692574%2C+-95.493498+29.696593%2C+-95.493755+29.697784%2C+-95.493755+29.699496%2C+-95.494012+29.70091%2C+-95.493926+29.704482%2C+-95.494098+29.70731%2C+-95.493755+29.709245%2C+-95.493498+29.709617%2C+-95.493755+29.712445%2C+-95.493755+29.715422%2C+-95.494012+29.716315%2C+-95.494012+29.722268%2C+-95.493669+29.723681%2C+-95.493777+29.722787%2C+-95.493318+29.723188%2C+-95.491719+29.723682%2C+-95.491364+29.724056%2C+-95.491286+29.724489%2C+-95.490429+29.724602%2C+-95.488955+29.725488%2C+-95.487757+29.726137%2C+-95.482102+29.72636%2C+-95.477952+29.725607%2C+-95.475338+29.725756%2C+-95.471563+29.726009%2C+-95.468822+29.726492%2C+-95.464489+29.727262%2C+-95.462319+29.727797%2C+-95.459902+29.729003%2C+-95.457999+29.729472%2C+-95.456741+29.730601%2C+-95.455027+29.730601%2C+-95.453999+29.730229%2C+-95.433435+29.729039%2C+-95.433435+29.728369%2C+-95.433007+29.726732%2C+-95.433007+29.725988%2C+-95.432835+29.725765%2C+-95.432835+29.724649%2C+-95.432493+29.722788%2C+-95.432493+29.720779%2C+-95.43275+29.72011%2C+-95.433007+29.716166%2C+-95.433178+29.715794%2C+-95.433178+29.708873%2C+-95.433007+29.70411%2C+-95.43275+29.703292%2C+-95.432493+29.701133%2C+-95.432493+29.698603%2C+-95.43215+29.696296%2C+-95.432064+29.691904%2C+-95.432236+29.690937%2C+-95.433607+29.69116%2C+-95.434035+29.691383%2C+-95.43472+29.692127%2C+-95.435149+29.692127%2C+-95.436348+29.690639%2C+-95.436862+29.690341%2C+-95.437976+29.690043%2C+-95.439604+29.690192%2C+-95.441318+29.690937%2C+-95.441918+29.690937%2C+-95.443032+29.690639%2C+-95.444659+29.689076%2C+-95.448601+29.686396%2C+-95.449458+29.685652%2C+-95.449629+29.68528%2C+-95.4504+29.684684%2C+-95.450657+29.684237%2C+-95.451343+29.683865%2C+-95.452799+29.683419%2C+-95.456226+29.681632%2C+-95.458368+29.680143%2C+-95.460425+29.679324%2C+-95.461282+29.679176%2C+-95.465823+29.67925%2C+-95.467022+29.678729%2C+-95.467022+29.67858%2C+-95.469336+29.678133%2C+-95.471049+29.677538%2C+-95.472592+29.677538%2C+-95.474219+29.677315%2C+-95.476447+29.676719%2C+-95.47936+29.676421%2C+-95.482359+29.6759%2C+-95.486643+29.6759%2C+-95.488271+29.676123%2C+-95.490328+29.67657%2C+-95.493669+29.677612%2C+-95.493669+29.677612%29%29&for_sale=1&property_class_id=1&listing_price_min=800000&listing_price_max=1500000&mp_term_years=30&mp_mortgage_rate=6.46&mp_down_payment_rate=20&bedroom_min=3&square_feet_min=2500&year_built_min=1990&sort=listdate+desc&view=map&_x_tr_sl=auto&_x_tr_tl=zh-TW&_x_tr_hl=en&_x_tr_pto=wapp&_x_tr_hist=true" class="nav-btn" target="_blank">獨立洋房 (Single Family Home / 3 臥室以上/建坪 2,500 sq ft 以上/1990 年後完工) [80萬-150萬]</a>
+
+                    <a href="https://www-har-com.translate.goog/search/dosearch?map_tools_nwlat=29.73015050494226&map_tools_nwlng=-95.50296465067473&map_tools_selat=29.67026875835286&map_tools_selng=-95.41139181209721&map_tools_polygon=POLYGON+%28%28-95.493669+29.677612%2C+-95.493669+29.678506%2C+-95.494183+29.680367%2C+-95.494183+29.682749%2C+-95.494012+29.683344%2C+-95.494012+29.684237%2C+-95.493755+29.684907%2C+-95.493755+29.685577%2C+-95.493241+29.687215%2C+-95.493241+29.689522%2C+-95.493498+29.692574%2C+-95.493498+29.696593%2C+-95.493755+29.697784%2C+-95.493755+29.699496%2C+-95.494012+29.70091%2C+-95.493926+29.704482%2C+-95.494098+29.70731%2C+-95.493755+29.709245%2C+-95.493498+29.709617%2C+-95.493755+29.712445%2C+-95.493755+29.715422%2C+-95.494012+29.716315%2C+-95.494012+29.722268%2C+-95.493669+29.723681%2C+-95.493777+29.722787%2C+-95.493318+29.723188%2C+-95.491719+29.723682%2C+-95.491364+29.724056%2C+-95.491286+29.724489%2C+-95.490429+29.724602%2C+-95.488955+29.725488%2C+-95.487757+29.726137%2C+-95.482102+29.72636%2C+-95.477952+29.725607%2C+-95.475338+29.725756%2C+-95.471563+29.726009%2C+-95.468822+29.726492%2C+-95.464489+29.727262%2C+-95.462319+29.727797%2C+-95.459902+29.729003%2C+-95.457999+29.729472%2C+-95.456741+29.730601%2C+-95.455027+29.730601%2C+-95.453999+29.730229%2C+-95.433435+29.729039%2C+-95.433435+29.728369%2C+-95.433007+29.726732%2C+-95.433007+29.725988%2C+-95.432835+29.725765%2C+-95.432835+29.724649%2C+-95.432493+29.722788%2C+-95.432493+29.720779%2C+-95.43275+29.72011%2C+-95.433007+29.716166%2C+-95.433178+29.715794%2C+-95.433178+29.708873%2C+-95.433007+29.70411%2C+-95.43275+29.703292%2C+-95.432493+29.701133%2C+-95.432493+29.698603%2C+-95.43215+29.696296%2C+-95.432064+29.691904%2C+-95.432236+29.690937%2C+-95.433607+29.69116%2C+-95.434035+29.691383%2C+-95.43472+29.692127%2C+-95.435149+29.692127%2C+-95.436348+29.690639%2C+-95.436862+29.690341%2C+-95.437976+29.690043%2C+-95.439604+29.690192%2C+-95.441318+29.690937%2C+-95.441918+29.690937%2C+-95.443032+29.690639%2C+-95.444659+29.689076%2C+-95.448601+29.686396%2C+-95.449458+29.685652%2C+-95.449629+29.68528%2C+-95.4504+29.684684%2C+-95.450657+29.684237%2C+-95.451343+29.683865%2C+-95.452799+29.683419%2C+-95.456226+29.681632%2C+-95.458368+29.680143%2C+-95.460425+29.679324%2C+-95.461282+29.679176%2C+-95.465823+29.67925%2C+-95.467022+29.678729%2C+-95.467022+29.67858%2C+-95.469336+29.678133%2C+-95.471049+29.677538%2C+-95.472592+29.677538%2C+-95.474219+29.677315%2C+-95.476447+29.676719%2C+-95.47936+29.676421%2C+-95.482359+29.6759%2C+-95.486643+29.6759%2C+-95.488271+29.676123%2C+-95.490328+29.67657%2C+-95.493669+29.677612%2C+-95.493669+29.677612%29%29&for_sale=1&property_class_id=1&listing_price_min=800000&listing_price_max=1700000&mp_term_years=30&mp_mortgage_rate=6.46&mp_down_payment_rate=20&bedroom_min=3&square_feet_min=2500&year_built_min=1990&sort=listdate+desc&view=map&_x_tr_sl=auto&_x_tr_tl=zh-TW&_x_tr_hl=en&_x_tr_pto=wapp&_x_tr_hist=true" class="nav-btn" target="_blank">獨立洋房 (Single Family Home / 3 臥室以上/建坪 2,500 sq ft 以上/1990 年後完工) [80萬-170萬]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>大將開發 | 休士頓房產市場調查工具</p>
+    </div>
+
+    <script>
+        // Populate Year Built dropdown
+        const yearSelect = document.getElementById('year_built');
+        for (let year = 1980; year <= 2026; year++) {
+            const option = document.createElement('option');
+            option.value = year;
+            option.textContent = year;
+            if (year === 1990) option.selected = true;
+            yearSelect.appendChild(option);
+        }
+
+        function launchSearch(mode) {
+            const minPrice = document.getElementById('min_price').value;
+            const maxPrice = document.getElementById('max_price').value;
+            const bedrooms = document.getElementById('bedrooms').value;
+            const yearBuilt = document.getElementById('year_built').value;
+            const elevator = document.getElementById('elevator').checked;
+
+            // Fixed parameters from the user's provided link
+            const polygon = 'POLYGON ((-95.493669 29.677612, -95.493669 29.678506, -95.494183 29.680367, -95.494183 29.682749, -95.494012 29.683344, -95.494012 29.684237, -95.493755 29.684907, -95.493755 29.685577, -95.493241 29.687215, -95.493241 29.689522, -95.493498 29.692574, -95.493498 29.696593, -95.493755 29.697784, -95.493755 29.699496, -95.494012 29.70091, -95.493926 29.704482, -95.494098 29.70731, -95.493755 29.709245, -95.493498 29.709617, -95.493755 29.712445, -95.493755 29.715422, -95.494012 29.716315, -95.494012 29.722268, -95.493669 29.723681, -95.493777 29.722787, -95.493318 29.723188, -95.491719 29.723682, -95.491364 29.724056, -95.491286 29.724489, -95.490429 29.724602, -95.488955 29.725488, -95.487757 29.726137, -95.482102 29.72636, -95.477952 29.725607, -95.475338 29.725756, -95.471563 29.726009, -95.468822 29.726492, -95.464489 29.727262, -95.462319 29.727797, -95.459902 29.729003, -95.457999 29.729472, -95.456741 29.730601, -95.455027 29.730601, -95.453999 29.730229, -95.433435 29.729039, -95.433435 29.728369, -95.433007 29.726732, -95.433007 29.725988, -95.432835 29.725765, -95.432835 29.724649, -95.432493 29.722788, -95.432493 29.720779, -95.43275 29.72011, -95.433007 29.716166, -95.433178 29.715794, -95.433178 29.708873, -95.433007 29.70411, -95.43275 29.703292, -95.432493 29.701133, -95.432493 29.698603, -95.43215 29.696296, -95.432064 29.691904, -95.432236 29.690937, -95.433607 29.69116, -95.434035 29.691383, -95.43472 29.692127, -95.435149 29.692127, -95.436348 29.690639, -95.436862 29.690341, -95.437976 29.690043, -95.439604 29.690192, -95.441318 29.690937, -95.441918 29.690937, -95.443032 29.690639, -95.444659 29.689076, -95.448601 29.686396, -95.449458 29.685652, -95.449629 29.68528, -95.4504 29.684684, -95.450657 29.684237, -95.451343 29.683865, -95.452799 29.683419, -95.456226 29.681632, -95.458368 29.680143, -95.460425 29.679324, -95.461282 29.679176, -95.465823 29.67925, -95.467022 29.678729, -95.467022 29.67858, -95.469336 29.678133, -95.471049 29.677538, -95.472592 29.677538, -95.474219 29.677315, -95.476447 29.676719, -95.47936 29.676421, -95.482359 29.6759, -95.486643 29.6759, -95.488271 29.676123, -95.490328 29.67657, -95.493669 29.677612, -95.493669 29.677612))';
+
+            let path = mode === 'sold' ? 'soldsearch?all_status=closd' : 'dosearch?for_sale=1';
+
+            let baseUrl = `https://www.har.com/search/${path}&map_tools_nwlat=29.73015050494226&map_tools_nwlng=-95.50296465067473&map_tools_selat=29.67026875835286&map_tools_selng=-95.41139181209721&map_tools_polygon=${encodeURIComponent(polygon)}&property_class_id=1`;
+
+            baseUrl += `&listing_price_min=${minPrice}`;
+            baseUrl += `&listing_price_max=${maxPrice}`;
+            baseUrl += `&bedroom_min=${bedrooms}`;
+            baseUrl += `&year_built_min=${yearBuilt}`;
+            baseUrl += `&square_feet_min=2500&sort=listdate%20desc&view=map`;
+            baseUrl += `&mp_term_years=30&mp_mortgage_rate=6.46&mp_down_payment_rate=20`;
+
+            if (elevator) {
+                baseUrl += `&elevator=1`;
+            }
+
+            // Construct Translate Link
+            const translateUrl = baseUrl.replace('www.har.com', 'www-har-com.translate.goog') +
+                '&_x_tr_sl=auto&_x_tr_tl=zh-TW&_x_tr_hl=en&_x_tr_pto=wapp&_x_tr_hist=true';
+
+            window.open(translateUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
