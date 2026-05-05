@@ -38,6 +38,9 @@ This document records the verification of data for the Singapore and Kuala Lumpu
 | TRX 1BR Rent | N/A | RM 4,500 - 6,000 | New | PropertyGuru May 2026 |
 | Data Lag (KL) | N/A | 6 months - 2 years | New | NAPIC / Valuation Dept |
 | Corridor Width (TRX)| N/A | 1.3m | New | Site Measurement / Spec |
+| Monash TRX Campus | N/A | 2032 completion, 22k students | New | Monash.edu / TRX City |
+| TRX Transacted Price| N/A | RM 1.8M - 3.2M (typical) | New | NAPIC / Brickz.my |
+| TRX Rental Example | N/A | RM 8,800 for 850sqft | New | PropertyGuru Listing |
 
 ## 4. Discrepancies &amp; Corrections
 
